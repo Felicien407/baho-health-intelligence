@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 140 10% 96%;
+    --foreground: 155 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 155 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 30% 12%;
+
+    --primary: 155 45% 18%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 150 12% 90%;
+    --secondary-foreground: 155 30% 12%;
+
+    --muted: 140 8% 93%;
+    --muted-foreground: 155 10% 45%;
+
+    --accent: 199 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 12% 88%;
+    --input: 150 12% 88%;
+    --ring: 155 45% 18%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 155 42% 14%;
+    --sidebar-foreground: 150 15% 85%;
+    --sidebar-primary: 199 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 155 35% 20%;
+    --sidebar-accent-foreground: 150 15% 90%;
+    --sidebar-border: 155 30% 22%;
+    --sidebar-ring: 199 80% 55%;
+
+    --chart-green: 155 55% 42%;
+    --chart-blue: 199 80% 55%;
+    --chart-yellow: 45 93% 58%;
+    --chart-red: 0 72% 55%;
+    --chart-teal: 175 55% 42%;
+
+    --kpi-sessions: 199 80% 55%;
+    --kpi-appointments: 155 55% 42%;
+    --kpi-alerts: 45 93% 58%;
+    --kpi-users: 175 55% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; filter: blur(4px); }
+  to { opacity: 1; filter: blur(0px); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
