@@ -2,5 +2,4 @@
 
 TODO: Document your project here
 
-  GOD IS ALL
- 
+# GOD IS GOOD
